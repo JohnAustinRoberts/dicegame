@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div id="pageWrapper">
+    <div id="titleScreen">
+        <div id="titleDiv">
+            Dice Game (Craps)
+        </div>
+        <div id="subtitleDiv">
+            An exploration into browser based dice games
+        </div>
+        <div id="playButton">
+            <button onclick="loadGameMenu()">Play!</button>
+        </div>
+    </div>
+    <div id="gameMenu">
+        Enter Player 1 name:
+        <input type="text" id="player1NameInput">
+        Enter Player 2 name: 
+        <input type="text" id="player2NameInput">
+        Enter Starting Money:
+        <select id="startingMoneyInput">
+            <option value="10">$10</option>
+            <option value="25">$25</option>
+            <option value="50">$50</option>
+            <option value="100">$100</option>
+          </select>
+        <button onclick="setNames()">Submit</button>
+    </div>
+    <div id="playScreen">
+        <div id="scoreboard">
+            <table>
+                <tr>
+                  <th>Player</th>
+                  <th>Score</th>
+                  <th>Current Roller</th>
+                </tr>
+                <tr id="player1Row">
+                  <td id="player1Name"></td>
+                  <td id="player1Score"></td>
+                  <td id="player1CurrentRollerToggle"><image src="diceRollerIcon.png" alt="Girl in a jacket" width="15" height="15"/></td>
+                </tr>
+                <tr id="player2Row">
+                  <td id="player2Name"></td>
+                  <td id="player2Score"></td>
+                  <td id="player2CurrentRollerToggle"></td>
+                </tr>
+              </table> 
+        </div>
+        <div id="pointTracker">
+            <table>
+                <tr>
+                    <th>Point</th>
+                    <th>2nd Roll</th>
+                    <th>3rd Roll</th>
+                    <th>4th Roll</th>
+                    <th>5th Roll</th>
+                    <th>6th Roll</th>
+                    <th>7th Roll</th>
+                </tr>
+                <tr>
+                    <td id="pointTracker1" class="pointTracker"></td>
+                    <td id="pointTracker2" class="pointTracker"></td>
+                    <td id="pointTracker3" class="pointTracker"></td>
+                    <td id="pointTracker4" class="pointTracker"></td>
+                    <td id="pointTracker5" class="pointTracker"></td>
+                    <td id="pointTracker6" class="pointTracker"></td>
+                    <td id="pointTracker7" class="pointTracker"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="diceRollArea">
+            <button onclick="diceRoll()">Roll!</button>
+        </div>
+        <div id="recapScreen">
+
+        </div>
+    </div>
+    <div id="creditsScreen">
+        <div id="createdBy">
+            Created By Austin Roberts
+        </div>
+        <div id="inspiredBy">
+            Inspired By Kameron Johnson
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="terst.js">
+    </script>
+</body>
+</html>
